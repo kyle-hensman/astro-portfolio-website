@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 const technologies = [
   "react",
   "typeScript",
@@ -11,7 +13,8 @@ const technologies = [
   "git",
   "mySQL",
   "MongoDB",
-  "bash"
+  "bash",
+  "golang"
 ];
 
 const blockchains = [
@@ -44,28 +47,38 @@ const devops = [
 ---
 
 <div class="relative overflow-x-hidden py-8">
-  <div
-    class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-20"
-  >
+  <div class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-20">
   </div>
-  <div
-    class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-20"
-  >
+  <div class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-20">
   </div>
 
   <div class="flex flex-col gap-8">
-    <div class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max">
+    <div
+      class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="1400"
+      data-aos-offset="0"
+    >
       {
         [...technologies, ...technologies, ...technologies].map((tech) => (
           <div class="flex items-center gap-2 group transition-all duration-300">
-            <img
+            <Image
+              src={`/svg/${tech.toLowerCase()}.svg`}
+              alt={tech.toLowerCase()}
+              class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
+              width="30"
+              height="30"
+              loading="eager"
+            />
+            {/* <img
               src={`/svg/${tech.toLowerCase()}.svg`}
               alt={tech.toLowerCase()}
               class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
               width="30"
               height="30"
               loading="lazy"
-            />
+            /> */}
             <span class="text-lg font-medium text-[var(--white-icon)]">
               {tech.charAt(0).toUpperCase() + tech.slice(1)}
             </span>
@@ -73,18 +86,33 @@ const devops = [
         ))
       }
     </div>
-    <div class="flex animate-scroll-reverse hover:animate-paused gap-12 md:gap-20 w-max">
+    <div
+      class="flex animate-scroll-reverse hover:animate-paused gap-12 md:gap-20 w-max"
+      class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="1600"
+      data-aos-offset="0"
+    >
       {
         [...blockchains, ...blockchains, ...blockchains].map((tech) => (
           <div class="flex items-center gap-2 group transition-all duration-300">
-            <img
-              src={`/svg/${tech}.svg`}
+            <Image
+              src={`/svg/${tech.toLowerCase()}.svg`}
+              alt={tech}
+              class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
+              width="30"
+              height="30"
+              loading="eager"
+            />
+            {/* <img
+              src={`/svg/${tech.toLowerCase()}.svg`}
               alt={tech}
               class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
               width="30"
               height="30"
               loading="lazy"
-            />
+            /> */}
             <span class="text-lg font-medium text-[var(--white-icon)]">
               {tech.charAt(0).toUpperCase() + tech.slice(1)}
             </span>
@@ -92,18 +120,32 @@ const devops = [
         ))
       }
     </div>
-    <div class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max">
+    <div
+      class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="1800"
+      data-aos-offset="0"
+    >
       {
         [...devops, ...devops, ...devops].map((tech) => (
           <div class="flex items-center gap-2 group transition-all duration-300">
-            <img
-              src={`/svg/${tech}.svg`}
+            <Image
+              src={`/svg/${tech.toLowerCase()}.svg`}
+              alt={tech}
+              class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
+              width="30"
+              height="30"
+              loading="eager"
+            />
+            {/* <img
+              src={`/svg/${tech.toLowerCase()}.svg`}
               alt={tech}
               class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
               width="30"
               height="30"
               loading="lazy"
-            />
+            /> */}
             <span class="text-lg font-medium text-[var(--white-icon)]">
               {tech.charAt(0).toUpperCase() + tech.slice(1)}
             </span>

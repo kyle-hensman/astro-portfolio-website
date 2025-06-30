@@ -47,14 +47,14 @@ const projects: Project[] = [
 
 <section
   id="projects"
-  class="py-12 border-t border-[#ffffff10] text-[var(--white)]"
+  class="w-full py-12 border-t border-[#ffffff10] text-[var(--white)]"
 >
   <div class="max-w-5xl mx-auto">
-    <!-- <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">My work</h2> -->
-    <!-- <h3 class="text-4xl md:text-5xl font-medium mb-8">Projects</h3> -->
-    
-    <div class="my-16 md:my-20">
-      <h2 class="text-[var(--white)] text-3xl md:text-4xl font-semibold mb-2">
+    <div 
+      class="my-16 md:my-20"
+      data-aos="fade-right"
+    >
+      <h2 class=" text-[var(--white)] text-3xl md:text-4xl font-semibold mb-2">
         Projects
       </h2>
       <div class="bg-[#a476ff] w-[116px] h-[2px]" />
@@ -63,7 +63,12 @@ const projects: Project[] = [
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {
         projects.map((project, i) => (
-          <div class="group">
+          <div
+            class="group"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0"
+          >
             <a
               href={project.preview}
               target="_blank"
@@ -80,7 +85,7 @@ const projects: Project[] = [
               </div>
               <div class="flex items-center px-3">
                 <div class="flex-grow">
-                  <h4 class="text-2xl font-semibold">{project.title}</h4>
+                  <h4 class="text-xl font-semibold">{project.title}</h4>
                   <span class="py-1 text-sm text-[var(--white-icon)]">
                     {project.status}
                   </span>
@@ -128,6 +133,9 @@ const projects: Project[] = [
       href="https://github.com/kyle-hensman?tab=repositories"
       aria-label="GitHub"
       class="w-full flex items-center justify-center gap-2 mt-9 text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-full bg-[#1414149c] hover:bg-[var(--white-icon-tr)] hover:scale-105"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-offset="0"
     >
       <span class="md:text-lg text-md">More projects on</span>
       <svg
