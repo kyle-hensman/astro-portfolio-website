@@ -1,9 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import svgl from "../../public/svgl.png";
-import stockin from "../../public/stockin.png";
-import moviesfordevs from "../../public/moviesfordevs.png";
-import tron from "../../public/tron.png";
+import claynosaurz from "../../public/claynosaurz.png";
+import starAtlas from "../../public/staratlas.png";
+import nymble from "../../public/nymble.png";
+import flutterStarter from "../../public/flutter-todo-starter-app.png";
+import myTodoApp from "../../public/my-todo-app.png";
+import loadster from "../../public/loadster.png";
 
 interface Project {
   title: string;
@@ -15,32 +17,53 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "MoviesForDevs",
-    image: moviesfordevs as ImageMetadata,
-    link: "https://github.com/gothsec/MoviesForDevs",
-    preview: "https://movies-for-devs.vercel.app",
-    status: "On Development",
+    title: "Claynosaurz",
+    image: claynosaurz as ImageMetadata,
+    link: "https://claynosaurz.com/",
+    preview: "https://collect.claynosaurz.com/",
+    status: "Complete",
   },
   {
-    title: "StockIn",
-    image: stockin as ImageMetadata,
-    link: "https://github.com/gothsec/stockin-demo",
-    preview: "https://stockin-demo.vercel.app",
-    status: "On Development",
+    title: "Nymble: The Nostr Client",
+    image: nymble as ImageMetadata,
+    link: "https://github.com/staratlasmeta",
+    preview: "https://nymble.world",
+    status: "Complete",
   },
   {
-    title: "Svgl.app",
-    image: svgl as ImageMetadata,
-    link: "https://github.com/pheralb/svgl",
-    preview: "https://svgl.app",
-    status: "Contributor",
+    title: "StarAtlas",
+    image: starAtlas as ImageMetadata,
+    link: "https://github.com/staratlasmeta",
+    preview: "https://play.staratlas.com",
+    status: "Complete",
   },
-  {
-    title: "Tron Legacy Web",
-    image: tron as ImageMetadata,
-    link: "https://github.com/Gothsec/Tron-Legacy-web",
-    preview: "https://tron-legacy-web.vercel.app/",
-    status: "Template (not official)",
+  // {
+  //   title: "Clean Starter App - NextJS",
+  //   image: myTodoApp as ImageMetadata,
+  //   link: "https://play.google.com/store/apps/details?id=world.nymble.application",
+  //   preview: "https://clean-nextjs-starter-app.vercel.app/",
+  //   status: "Complete",
+  // },
+  // {
+  //  title: "Recipeasy Mobile Recipe App - React Native",
+  //  image: myTodoApp as ImageMetadata,
+  //  link: "https://github.com/pheralb/svgl",
+  //  preview: "https://svgl.app",
+  //  status: "Published",
+  // },
+  // {
+  //   title: "Starter Todo App - Flutter",
+  //   image: flutterStarter as ImageMetadata,
+  //   link: "https://github.com/kyle-hensman/flutter_starter_todo_app",
+  //   preview: "https://github.com/kyle-hensman/flutter_starter_todo_app",
+  //   status: "Complete",
+  // },
+    {
+    title: "Loadster: HTTP Load Testing CLI",
+    image: loadster as ImageMetadata,
+    link: "https://github.com/kyle-hensman/loadster",
+    preview: "https://github.com/kyle-hensman/loadster/releases",
+    status: "Complete",
   },
 ];
 ---
