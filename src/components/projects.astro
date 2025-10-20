@@ -3,8 +3,8 @@ import { Image } from "astro:assets";
 import claynosaurz from "../../public/claynosaurz.png";
 import starAtlas from "../../public/staratlas.png";
 import nymble from "../../public/nymble.png";
-import flutterStarter from "../../public/flutter-todo-starter-app.png";
-import myTodoApp from "../../public/my-todo-app.png";
+// import flutterStarter from "../../public/flutter-todo-starter-app.png";
+// import myTodoApp from "../../public/my-todo-app.png";
 import loadster from "../../public/loadster.png";
 
 interface Project {
@@ -85,7 +85,7 @@ const projects: Project[] = [
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {
-        projects.map((project, i) => (
+        projects.map((project) => (
           <div
             class="group"
             data-aos="fade-zoom-in"
